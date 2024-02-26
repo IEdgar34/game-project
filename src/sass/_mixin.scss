@@ -8,3 +8,19 @@
     color: #fff;
     cursor: pointer;
 }
+
+@mixin media() {
+    @media (max-width: 820px) {
+        @content;
+    }
+}
+@mixin mobail() {
+    @media (max-width: 580px) {
+        @content;
+    }
+}
+@mixin smoll() {
+    @media (max-width: 375px) {
+        @content;
+    }
+}

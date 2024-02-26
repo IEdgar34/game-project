@@ -16,9 +16,19 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    justify-content: center;
     grid-gap: 10px;
     width: 50%;
     height: 90%;
+    @include media() {
+        grid-template-rows: repeat(3, 110px);
+    }
+    @include mobail() {
+        grid-template-rows: repeat(3, 90px);
+    }
+    @include smoll() {
+        grid-template-rows: repeat(3, 70px);
+    }
 }
 .item {
     position: relative;
@@ -37,6 +47,15 @@
         position: absolute;
         background-color: #0da7d5;
         border-radius: 10px;
+    }
+    @include media() {
+        font-size: 100px;
+    }
+    @include mobail() {
+        font-size: 70px;
+    }
+    @include smoll() {
+        font-size: 50px;
     }
     &_active {
         &::after {
